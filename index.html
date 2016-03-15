@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Knockout Experiments</title>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/knockout/3.4.0/knockout-min.js"></script>
+</head>
+<body>
+<!--Use data-bind attribute to connect with model-->
+<h1 data-bind="text: car">Bind Here</h1>
+<!--Bind a value from input into the model after keydown-->
+<input type="text" data-bind="value: car, valueUpdate: 'afterkeydown'">
+<!--On click run view model method addCar-->
+<button data-bind="click: addCar"></button>
+<!--Use foreach to bind an array to a list access each item with $data-->
+<ul data-bind="foreach: ary">
+    <li data-bind="text: $data"></li>
+</ul>
+<script src="main.js"></script>
+</body>
+</html>
